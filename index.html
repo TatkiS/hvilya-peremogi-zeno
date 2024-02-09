@@ -56,6 +56,25 @@
     display: block; /* Центрування аудіо плеєра */
     margin: 20px auto; /* Додано відступи зверху та знизу */
   }
+  /* Стилі для бігучої стрічки */
+  .scrolling-banner {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: rgb(39, 110, 241);
+    color: white;
+    padding: 10px;
+    margin: 20px 0;
+  }
+  .scrolling-banner::before {
+    content: 'ПУТІН ХУЙЛО! ВСІ МОСКАЛІ ПІДАРАСИ! ВСЕ БУДЕ УКРАЇНА! УКРАЇНА ПОНАД УСЕ! ПУТІН ХУЙЛО! ВСІ МОСКАЛІ ПІДАРАСИ! ВСЕ БУДЕ УКРАЇНА! УКРАЇНА ПОНАД УСЕ! ПУТІН ХУЙЛО! ВСІ МОСКАЛІ ПІДАРАСИ! ВСЕ БУДЕ УКРАЇНА! УКРАЇНА ПОНАД УСЕ! ';
+    display: inline-block;
+    animation: scroll-banner 30s linear infinite;
+  }
+  @keyframes scroll-banner {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
   /* Адаптація під мобільні пристрої */
   @media screen and (max-width: 768px) {
     nav ul li {
@@ -71,7 +90,7 @@
 <h1>Хвиля Перемоги</h1>
 <nav>
 <ul>
-
+  <!-- Меню навігації тут -->
 </ul>
 </nav>
 </header>
@@ -94,13 +113,16 @@
 Ваш браузер не підтримує аудіо елемент.
 </audio>
 </section>
-    <a href="https://linktr.ee/Sergiy_Budniy" target="_blank">
-      <button class="buymeacoffee">НА КАВУ</button>
-    </a>
+<a href="https://linktr.ee/Sergiy_Budniy" target="_blank">
+  <button class="buymeacoffee">НА КАВУ</button>
+</a>
 <section id="contact">
 <h2>Контакти</h2>
 <p>Для зв'язку з нами використовуйте електронну пошту: <a href="mailto:wavevictory@protonmail.com">wavevictory@protonmail.com</a></p>
 </section>
+
+<!-- Бігуча стрічка з даними -->
+<div class="scrolling-banner"></div>
 </main>
 
 <footer>
